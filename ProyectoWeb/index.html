@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Solicitud Soporte Tecnico</title>
+</head>
+<body>
+    <div class="encabezado">
+        <img src="images/logoUAC.jpg" alt="Escudo UACAM" width="100px">
+        <h1>Centro de Ingeniería Computacional</h1>
+        <img src="images/logoIngenieria.jpg" alt="Escudo Facultad de Ingenieria" width="80px" id="ingenieria">
+    </div>
+    <div class="solicitud">
+        <p id="fechaSolicitud">03/02/2024</p>
+        <h2>Solicitud de Servicio Técnico</h2>
+
+        <form action="#" method="post">
+            <div class="contenedorInicial">
+                <div>
+                    <label for="telefono" class="labelMayor">Teléfono</label>
+                    <input type="number" name="telefono" id="telefono" placeholder="Escribe tu telefono">
+                </div>
+                <div>
+                    <label for="edificio" class="labelMayor">Edificio y nivel</label>
+                    <input type="text" name="edificio" id="edificio" placeholder="Escribe tu edificio">
+                </div>
+                <div>
+                    <label for="area" class="labelMayor">Ubicación física</label>
+                    <input type="text" name="area" id="area" placeholder="Escribe tu área">
+                </div>
+            </div>
+            <fieldset>
+                <legend class="labelMayor">Equipos</legend>
+                <div class="contenedor-checkbox">
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="monitor" id="monitor" value="Monitor">
+                        <label for="monitor">Monitor</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="nodo" id="nodo" value="Nodo">
+                        <label for="nodo">Nodo</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="ups" id="ups" value="UPS">
+                        <label for="ups">UPS</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="laptop" id="laptop" value="Laptop">
+                        <label for="laptop">Laptop</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="proyector" id="proyector" value="Proyector">
+                        <label for="proyector">Proyector</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="access" id="access" value="Access Point">
+                        <label for="access">Acess Point</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="pc" id="pc" value="PC">
+                        <label for="pc">PC</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="gabinete" id="gabinete" value="Gabinete">
+                        <label for="gabinete">Gabinete</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="teclado" id="teclado" value="Teclado">
+                        <label for="teclado">Teclado</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="mouse" id="mouse" value="Mouse">
+                        <label for="mouse">Mouse</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="telefono" id="telefono" value="Teléfono">
+                        <label for="telefono">Teléfono</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="impresora" id="impresora" value="Impresora">
+                        <label for="impresora">Impresora</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" name="otro" id="otro" value="Otro">
+                        <label for="otro">Otro</label>
+                    </div>
+                    <div id="otroInputContainer" style="display: none;">
+                        <label for="otroInput">Especifique:</label>
+                        <input type="text" name="otroInput" id="otroInput">
+                    </div>
+                </div>
+            </fieldset>
+
+            <label for="descripcion" class="labelMayor">Descripción del problema</label>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="8" placeholder="Escribe todos los detalles de tu problema"></textarea>
+            
+            <div class="enviarSoli">
+                <button type="submit" id="enviar" value="Submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        // Obtén el checkbox "Otro" y el campo de texto asociado
+        var otroCheckbox = document.getElementById("otro");
+        var otroInputContainer = document.getElementById("otroInputContainer");
+    
+        // Escucha los cambios en el checkbox "Otro"
+        otroCheckbox.addEventListener("change", function () {
+            // Muestra u oculta el campo de texto según si se seleccionó "Otro" o no
+            otroInputContainer.style.display = otroCheckbox.checked ? "block" : "none";
+        });
+    </script>
+</body>
+</html>
